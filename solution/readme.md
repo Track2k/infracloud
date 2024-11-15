@@ -62,7 +62,7 @@ Generate the input file (example for indexes 2 to 8):
 
 ### Basic Run with Volume Mount
 ```
-docker run -v /path-to-your/csvserver/inputdata/inputFile:/csvserver/inputdata infracloudio/csvserver
+docker run -v /home/ubuntu/csvserver/inputdata/inputFile:/csvserver/inputdata infracloudio/csvserver
 ```
 
 ### Finding the Port
@@ -75,7 +75,7 @@ ss -tuln
 ### Final Configuration
 Run the container with all required configurations:
 ```bash
-docker run -d -v /path-to-your/inputdata/inputFile:/csvserver/inputdata -p 9393:9300 -e CSVSERVER_BORDER=Orange infracloudio/csvserver:latest
+docker run -d -v /home/ubuntu/csvserver/inputdata/inputFile:/csvserver/inputdata -p 9393:9300 -e CSVSERVER_BORDER=Orange infracloudio/csvserver:latest
 ```
 
 This command:
